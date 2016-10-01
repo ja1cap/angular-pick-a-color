@@ -41,32 +41,32 @@ angular.module('pickAColor', [])
                 return function (scope, element, attrs, controller) {
                     // Process options
                     var options = pickAColor.getOptions();
-                    if (attrs.inlineDropdown !== null) {
-                        options.inlineDropdown = attrs.inlineDropdown;
+                    if (attrs.inlineDropdown !== undefined) {
+                        options.inlineDropdown = JSON.parse(attrs.inlineDropdown);
                     }
-                    if (attrs.showSpectrum !== null) {
-                        options.showSpectrum = attrs.showSpectrum;
+                    if (attrs.showSpectrum !== undefined) {
+                        options.showSpectrum = JSON.parse(attrs.showSpectrum);
                     }
-                    if (attrs.showSavedColors !== null) {
-                        options.showSavedColors = attrs.showSavedColors;
+                    if (attrs.showSavedColors !== undefined) {
+                        options.showSavedColors = JSON.parse(attrs.showSavedColors);
                     }
-                    if (attrs.saveColorsPerElement !== null) {
-                        options.saveColorsPerElement = attrs.saveColorsPerElement;
+                    if (attrs.saveColorsPerElement !== undefined) {
+                        options.saveColorsPerElement = JSON.parse(attrs.saveColorsPerElement);
                     }
-                    if (attrs.fadeMenuToggle !== null) {
-                        options.fadeMenuToggle = attrs.fadeMenuToggle;
+                    if (attrs.fadeMenuToggle !== undefined) {
+                        options.fadeMenuToggle = JSON.parse(attrs.fadeMenuToggle);
                     }
-                    if (attrs.showAdvanced !== null) {
-                        options.showAdvanced = attrs.showAdvanced;
+                    if (attrs.showAdvanced !== undefined) {
+                        options.showAdvanced = JSON.parse(attrs.showAdvanced);
                     }
-                    if (attrs.showBasicColors !== null) {
-                        options.showBasicColors = attrs.showBasicColors;
+                    if (attrs.showBasicColors !== undefined) {
+                        options.showBasicColors = JSON.parse(attrs.showBasicColors);
                     }
-                    if (attrs.showHexInput !== null) {
-                        options.showHexInput = attrs.showHexInput;
+                    if (attrs.showHexInput !== undefined) {
+                        options.showHexInput = JSON.parse(attrs.showHexInput);
                     }
-                    if (attrs.allowBlank !== null) {
-                        options.allowBlank = attrs.allowBlank;
+                    if (attrs.allowBlank !== undefined) {
+                        options.allowBlank = JSON.parse(attrs.allowBlank);
                     }
 
                     scope.$watch(model, function(value) {
